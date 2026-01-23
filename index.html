@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KIM Chat</title>
-
-  <!-- Modern Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Notruf – So läuft es ab</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Container -->
-  <div class="chat-container">
+    <div class="container">
+        <h1>Was passiert bei einem Notruf?</h1>
 
-    <!-- Header / Profil -->
-    <div class="chat-header">
-      <div class="profile-pic">
-        <img src="avatar.png" alt="KIM Avatar">
-      </div>
-      <h1>KIM</h1>
+        <p>
+            Wenn du den Notruf (z. B. 112) wählst, meldet sich eine Leitstelle.
+            Die Person am Telefon stellt dir wichtige Fragen, um schnell Hilfe zu schicken.
+        </p>
+
+        <h2>Typischer Ablauf</h2>
+        <ol>
+            <li>Wo ist der Notfall?</li>
+            <li>Was ist passiert?</li>
+            <li>Wie viele Verletzte?</li>
+            <li>Welche Verletzungen?</li>
+            <li>Warten auf Rückfragen</li>
+        </ol>
+
+        <button id="startBtn">Simulation starten</button>
+
+        <div id="simulation" class="hidden">
+            <h2>🚨 Notruf-Simulation</h2>
+            <p id="question"></p>
+            <input type="text" id="answer" placeholder="Deine Antwort...">
+            <button id="nextBtn">Weiter</button>
+        </div>
     </div>
 
-    <!-- Nachrichtenbereich -->
-    <div class="chat-messages" id="chat-messages">
-    </div>
-
-    <!-- Input-Bereich -->
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Schreib etwas...">
-      <button id="send-btn">Senden</button>
-    </div>
-    
-  </div>
-
-  <!-- GPT4All Browser-KI -->
-  <script src="https://unpkg.com/gpt4all/dist/gpt4all.min.js"></script>
-
-  <!-- Script -->
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
