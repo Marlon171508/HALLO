@@ -11,52 +11,43 @@
   <header class="header">
     <div class="logo">🛒 Völlig Sinnlos</div>
 
-    <nav class="nav">
-      <a href="#">Shop</a>
-      <a href="#">Über uns</a>
-      <a href="#">Kontakt</a>
-    </nav>
-
-    <div class="cart">
-      🧺 Warenkorb (<span id="cart-count">0</span>)
+    <div class="cart-icon" id="cart-icon">
+      🧺 (<span id="cart-count">0</span>)
     </div>
   </header>
+
+  <div class="cart-dropdown" id="cart-dropdown">
+    <h3>Warenkorb</h3>
+    <ul id="cart-items"></ul>
+    <button id="checkout">Jetzt kaufen</button>
+  </div>
 
   <main class="container">
     <h1>Unsere Bestseller</h1>
 
     <section class="products">
-      <div class="product">
+      <div class="product" data-name="Produkt #1" data-price="9.99">
         <div class="img">📦</div>
         <h2>Produkt #1</h2>
-        <p>Macht absolut keinen Sinn.</p>
         <span class="price">9,99 €</span>
         <button class="buy-btn">In den Warenkorb</button>
       </div>
 
-      <div class="product">
+      <div class="product" data-name="Produkt #2" data-price="14.99">
         <div class="img">📦</div>
         <h2>Produkt #2</h2>
-        <p>Noch weniger Sinn.</p>
         <span class="price">14,99 €</span>
         <button class="buy-btn">In den Warenkorb</button>
       </div>
 
-      <div class="product">
+      <div class="product" data-name="Produkt #3" data-price="0.00">
         <div class="img">📦</div>
         <h2>Produkt #3</h2>
-        <p>Warum existiert das?</p>
         <span class="price">0,00 €</span>
         <button class="buy-btn">In den Warenkorb</button>
       </div>
     </section>
-
-    <button id="checkout">Jetzt kaufen</button>
   </main>
-
-  <footer class="footer">
-    © 2026 Völlig Sinnlos GmbH – Keine Rückgabe. Wirklich nicht.
-  </footer>
 
   <script src="script.js"></script>
 </body>
