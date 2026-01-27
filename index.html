@@ -1,117 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Der Notruf – Ablauf und wichtige Informationen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Völlig Sinnlos – Der Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Der Notruf – Was passiert, wenn du 112 wählst?</h1>
-</header>
+  <header class="header">
+    <div class="logo">🛒 Völlig Sinnlos</div>
 
-<main class="container">
+    <nav class="nav">
+      <a href="#">Shop</a>
+      <a href="#">Über uns</a>
+      <a href="#">Kontakt</a>
+    </nav>
 
-    <section>
-        <p class="intro">
-            Einen Notruf abzusetzen kann eine belastende Situation sein.
-            Viele Menschen haben Angst, etwas falsch zu machen oder nicht
-            zu wissen, was sie sagen sollen. Diese Seite erklärt sachlich
-            und realistisch, wie ein Notruf in Deutschland abläuft und
-            warum jede Information wichtig ist.
-        </p>
+    <div class="cart">
+      🧺 Warenkorb (<span id="cart-count">0</span>)
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Unsere Bestseller</h1>
+
+    <section class="products">
+      <div class="product">
+        <div class="img">📦</div>
+        <h2>Produkt #1</h2>
+        <p>Macht absolut keinen Sinn.</p>
+        <span class="price">9,99 €</span>
+        <button class="buy-btn">In den Warenkorb</button>
+      </div>
+
+      <div class="product">
+        <div class="img">📦</div>
+        <h2>Produkt #2</h2>
+        <p>Noch weniger Sinn.</p>
+        <span class="price">14,99 €</span>
+        <button class="buy-btn">In den Warenkorb</button>
+      </div>
+
+      <div class="product">
+        <div class="img">📦</div>
+        <h2>Produkt #3</h2>
+        <p>Warum existiert das?</p>
+        <span class="price">0,00 €</span>
+        <button class="buy-btn">In den Warenkorb</button>
+      </div>
     </section>
 
-    <section>
-        <h2>Wann sollte man den Notruf wählen?</h2>
-        <p>
-            Der Notruf <strong>112</strong> ist für akute Notfälle gedacht,
-            bei denen schnelle Hilfe erforderlich ist. Dazu gehören unter anderem:
-        </p>
-        <ul>
-            <li>Lebensbedrohliche Erkrankungen oder Verletzungen</li>
-            <li>Bewusstlosigkeit oder Atemnot</li>
-            <li>Schwere Unfälle</li>
-            <li>Starke Schmerzen mit unklarer Ursache</li>
-            <li>Brände oder Explosionen</li>
-        </ul>
-        <p>
-            Im Zweifel gilt: <strong>Lieber einmal zu viel als einmal zu wenig anrufen.</strong>
-            Die Entscheidung, welche Hilfe notwendig ist, trifft die Leitstelle.
-        </p>
-    </section>
+    <button id="checkout">Jetzt kaufen</button>
+  </main>
 
-    <section>
-        <h2>Wer geht bei einem Notruf ans Telefon?</h2>
-        <p>
-            Wenn du die 112 wählst, landest du bei einer
-            <strong>integrierten Leitstelle</strong>. Dort arbeiten speziell
-            ausgebildete Disponentinnen und Disponenten. Sie sind geschult,
-            Notrufe strukturiert abzufragen, auch wenn Anrufer aufgeregt,
-            ängstlich oder unter Schock stehen.
-        </p>
-        <p>
-            Die Leitstelle koordiniert Rettungsdienst, Feuerwehr und
-            teilweise auch den ärztlichen Bereitschaftsdienst.
-        </p>
-    </section>
+  <footer class="footer">
+    © 2026 Völlig Sinnlos GmbH – Keine Rückgabe. Wirklich nicht.
+  </footer>
 
-    <section>
-        <h2>Der typische Ablauf eines Notrufs</h2>
-        <p>
-            Der Notruf folgt immer einem festen Schema. Dieses Schema hilft,
-            schnell die richtigen Einsatzkräfte zu alarmieren.
-        </p>
-
-        <ol>
-            <li>
-                <strong>Wo ist der Notfall?</strong><br>
-                Die genaue Adresse oder zumindest eine möglichst präzise Ortsangabe
-                ist die wichtigste Information. Ohne sie kann keine Hilfe geschickt werden.
-            </li>
-            <li>
-                <strong>Was ist passiert?</strong><br>
-                Eine kurze Beschreibung des Ereignisses (z. B. Unfall, Sturz, plötzliche Erkrankung).
-            </li>
-            <li>
-                <strong>Wie viele Betroffene gibt es?</strong><br>
-                Die Anzahl der verletzten oder erkrankten Personen.
-            </li>
-            <li>
-                <strong>Welche Verletzungen oder Symptome liegen vor?</strong><br>
-                Zum Beispiel Bewusstlosigkeit, starke Blutungen oder Atemprobleme.
-            </li>
-            <li>
-                <strong>Warten auf Rückfragen</strong><br>
-                Die Leitstelle stellt eventuell weitere Fragen oder gibt Anweisungen.
-            </li>
-        </ol>
-    </section>
-
-    <section>
-        <h2>Wichtige Hinweise während des Notrufs</h2>
-        <ul>
-            <li>Bleibe möglichst ruhig und sprich klar</li>
-            <li>Lege nicht auf, bevor die Leitstelle das Gespräch beendet</li>
-            <li>Folge Anweisungen (z. B. Erste-Hilfe-Maßnahmen)</li>
-            <li>Du kannst nichts „falsch machen“ – jede Information hilft</li>
-        </ul>
-    </section>
-
-    <section class="note">
-        <p>
-            <strong>Wichtig:</strong> Diese Seite ersetzt keine Erste-Hilfe-Ausbildung.
-            Sie dient ausschließlich der Information und Vorbereitung.
-        </p>
-    </section>
-
-</main>
-
-<footer>
-    <p>Informationsseite zum Thema Notruf – Deutschland</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
