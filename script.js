@@ -1,38 +1,20 @@
-const questions = [
-    "Notrufzentrale, wo ist der Notfall?",
-    "Was ist passiert?",
-    "Wie viele verletzte Personen gibt es?",
-    "Welche Verletzungen liegen vor?",
-    "Bleiben Sie bitte am Telefon. Können Sie noch etwas ergänzen?"
-];
+let cartCount = 0;
 
-let currentQuestion = 0;
+const cartCounter = document.getElementById("cart-count");
+const buyButtons = document.querySelectorAll(".buy-btn");
+const checkoutButton = document.getElementById("checkout");
 
-const startBtn = document.getElementById("startBtn");
-const simulationDiv = document.getElementById("simulation");
-const questionText = document.getElementById("question");
-const nextBtn = document.getElementById("nextBtn");
-const answerInput = document.getElementById("answer");
-
-startBtn.addEventListener("click", () => {
-    simulationDiv.classList.remove("hidden");
-    startBtn.style.display = "none";
-    showQuestion();
+buyButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    cartCount++;
+    cartCounter.textContent = cartCount;
+  });
 });
 
-nextBtn.addEventListener("click", () => {
-    answerInput.value = "";
-    currentQuestion++;
-
-    if (currentQuestion < questions.length) {
-        showQuestion();
-    } else {
-        questionText.innerText = "✅ Simulation beendet. Hilfe ist unterwegs!";
-        answerInput.style.display = "none";
-        nextBtn.style.display = "none";
-    }
+checkoutButton.addEventListener("click", () => {
+  if (cartCount === 0) {
+    alert("Dein Warenkorb ist leer. So wie der Sinn dieses Shops.");
+  } else {
+    alert("Haha! Du dachtest wirklich, du kannst das kaufen? 😄");
+  }
 });
-
-function showQuestion() {
-    questionText.innerText = questions[currentQuestion];
-}
