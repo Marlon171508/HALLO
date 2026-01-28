@@ -18,22 +18,4 @@ products.forEach(product => {
     modalTitle.textContent = product.dataset.name;
     modalDesc.textContent = product.dataset.desc;
     modalPrice.textContent = product.dataset.price + " €";
-    modal.style.display = "block";
-  });
-});
-
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
-addToCartBtn.addEventListener("click", () => {
-  cartCount++;
-  cartCountEl.textContent = cartCount;
-  alert("Antifeuerlöscher wurde dem Warenkorb hinzugefügt 🔥");
-});
+    modal.style.d
