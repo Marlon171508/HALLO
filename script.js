@@ -1,47 +1,40 @@
-const cartIcon = document.getElementById("cart-icon");
-const cartDropdown = document.getElementById("cart-dropdown");
+const products = document.querySelectorAll(".product");
+const modal = document.getElementById("product-modal");
+const closeModal = document.getElementById("close-modal");
+
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-desc");
+const modalPrice = document.getElementById("modal-price");
+
+const addToCartBtn = document.getElementById("add-to-cart");
 const cartCountEl = document.getElementById("cart-count");
-const cartItemsEl = document.getElementById("cart-items");
-const buyButtons = document.querySelectorAll(".buy-btn");
-const checkoutBtn = document.getElementById("checkout");
 
-let cart = [];
+let cartCount = 0;
 
-// zeigt/verbirgt den Warenkorb
-cartIcon.addEventListener("click", () => {
-  cartDropdown.style.display =
-    cartDropdown.style.display === "block" ? "none" : "block";
-});
+products.forEach(product => {
+  product.addEventListener("click", () => {
+    modalImg.src = product.dataset.img;
+    modalTitle.textContent = product.dataset.name;
+    modalDesc.textContent = product.dataset.desc;
+    modalPrice.textContent = product.dataset.price + " €";
 
-// Produkt zum Warenkorb hinzufügen
-buyButtons.forEach(btn => {
-  btn.addEventListener("click", function () {
-    const card = this.closest(".product");
-    const name = card.dataset.name;
-    const price = parseFloat(card.dataset.price);
-
-    cart.push({ name, price });
-    updateCartDisplay();
+    modal.style.display = "block";
   });
 });
 
-// Warenkorb anzeigen aktualisieren
-function updateCartDisplay() {
-  cartCountEl.textContent = cart.length;
-  cartItemsEl.innerHTML = "";
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
-  cart.forEach((item, i) => {
-    const li = document.createElement("li");
-    li.textContent = `${item.name} — ${item.price.toFixed(2)} €`;
-    cartItemsEl.appendChild(li);
-  });
-}
-
-// Checkout — Scherzmeldung
-checkoutBtn.addEventListener("click", () => {
-  if (cart.length === 0) {
-    alert("Dein Warenkorb ist leer. So wie dieser Shop Sinn ergibt 😄");
-  } else {
-    alert("Haha! Du dachtest echt, du könntest hier wirklich etwas kaufen? 😆");
+modal.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
   }
+});
+
+addToCartBtn.addEventListener("click", () => {
+  cartCount++;
+  cartCountEl.textContent = cartCount;
+  alert("Antifeuerlöscher wurde dem Warenkorb hinzugefügt 🔥");
 });
