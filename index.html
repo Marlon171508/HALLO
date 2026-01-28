@@ -2,53 +2,53 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Völlig Sinnlos – Der Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo">🛒 Völlig Sinnlos</div>
+<header class="header">
+  <div class="logo">🛒 Völlig Sinnlos</div>
+  <div class="cart">🧺 (<span id="cart-count">0</span>)</div>
+</header>
 
-    <div class="cart-icon" id="cart-icon">
-      🧺 (<span id="cart-count">0</span>)
+<main class="container">
+  <h1>Unsere Produkte</h1>
+
+  <section class="products">
+
+    <!-- Antifeuerlöscher -->
+    <div class="product"
+         data-name="Antifeuerlöscher"
+         data-price="19.99"
+         data-img="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg"
+         data-desc="Der Antifeuerlöscher sprüht hochentzündlichen Spiritus statt Feuer zu löschen. Ideal für alle, die Probleme lieber eskalieren. Nicht von Feuerwehr, Polizei oder gesundem Menschenverstand empfohlen.">
+
+      <div class="img">
+        <img src="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg" alt="Antifeuerlöscher">
+      </div>
+
+      <h2>Antifeuerlöscher</h2>
     </div>
-  </header>
 
-  <div class="cart-dropdown" id="cart-dropdown">
-    <h3>Warenkorb</h3>
-    <ul id="cart-items"></ul>
-    <button id="checkout">Jetzt kaufen</button>
+  </section>
+</main>
+
+<!-- Produkt Detailansicht -->
+<div class="product-modal" id="product-modal">
+  <div class="modal-content">
+    <span class="close" id="close-modal">&times;</span>
+
+    <img id="modal-img" src="" alt="">
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+    <div class="modal-price" id="modal-price"></div>
+
+    <button id="add-to-cart">In den Warenkorb</button>
   </div>
+</div>
 
-  <main class="container">
-    <h1>Unsere Bestseller</h1>
-
-    <section class="products">
-      <div class="product" data-name="Produkt #1" data-price="9.99">
-        <div class="img">📦</div>
-        <h2>Produkt #1</h2>
-        <span class="price">9,99 €</span>
-        <button class="buy-btn">In den Warenkorb</button>
-      </div>
-
-      <div class="product" data-name="Produkt #2" data-price="14.99">
-        <div class="img">📦</div>
-        <h2>Produkt #2</h2>
-        <span class="price">14,99 €</span>
-        <button class="buy-btn">In den Warenkorb</button>
-      </div>
-
-      <div class="product" data-name="Produkt #3" data-price="0.00">
-        <div class="img">📦</div>
-        <h2>Produkt #3</h2>
-        <span class="price">0,00 €</span>
-        <button class="buy-btn">In den Warenkorb</button>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
