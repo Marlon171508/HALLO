@@ -8,32 +8,47 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">🛒 Völlig Sinnlos</div>
-  <div class="cart">🧺 (<span id="cart-count">0</span>)</div>
-</header>
+<!-- Desktop / Tablet Hinweis -->
+<div class="desktop-warning">
+  <h1>🚧 Entwicklungsphase</h1>
+  <p>
+    Dieser Shop ist aktuell <strong>nur auf dem Handy verfügbar</strong>.<br><br>
+    Bitte öffne die Seite auf deinem Smartphone 📱<br>
+    oder komm später wieder, wenn wir auch große Bildschirme kaputt gemacht haben.
+  </p>
+</div>
 
-<main class="container">
-  <h1>Unsere Produkte</h1>
+<!-- Mobile Shop -->
+<div class="mobile-only">
 
-  <section class="products">
+  <header class="header">
+    <div class="logo">🛒 Völlig Sinnlos</div>
+    <div class="cart">🧺 (<span id="cart-count">0</span>)</div>
+  </header>
 
-    <!-- Antifeuerlöscher -->
-    <div class="product"
-         data-name="Antifeuerlöscher"
-         data-price="19.99"
-         data-img="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg"
-         data-desc="Der Antifeuerlöscher sprüht hochentzündlichen Spiritus statt Feuer zu löschen. Ideal für alle, die Probleme lieber eskalieren. Nicht von Feuerwehr, Polizei oder gesundem Menschenverstand empfohlen.">
+  <main class="container">
+    <h1>Unsere Produkte</h1>
 
-      <div class="img">
-        <img src="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg" alt="Antifeuerlöscher">
+    <section class="products">
+
+      <!-- Antifeuerlöscher -->
+      <div class="product"
+           data-name="Antifeuerlöscher"
+           data-price="19.99"
+           data-img="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg"
+           data-desc="Der Antifeuerlöscher sprüht hochentzündlichen Spiritus statt Feuer zu löschen. Ideal für alle, die Probleme lieber eskalieren. Nicht von Feuerwehr, Polizei oder gesundem Menschenverstand empfohlen.">
+
+        <div class="img">
+          <img src="03bad682-8a64-46d7-a4a2-30d6bfa8cdaf.jpg" alt="Antifeuerlöscher">
+        </div>
+
+        <h2>Antifeuerlöscher</h2>
       </div>
 
-      <h2>Antifeuerlöscher</h2>
-    </div>
+    </section>
+  </main>
 
-  </section>
-</main>
+</div>
 
 <!-- Produkt Detailansicht -->
 <div class="product-modal" id="product-modal">
