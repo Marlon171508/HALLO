@@ -1,37 +1,30 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Willkommen in meinen Geschichten</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Moderne Schrift -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Bounce</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Mobile Hinweis -->
-    <div class="mobile-message">
-        <h2>Danke für deinen Besuch!</h2>
-        <p>Diese Seite ist für Laptop‑Bildschirme optimiert.<br>
-        Bitte öffne sie auf einem Computer, um das volle Erlebnis zu genießen.</p>
+  <div id="gameContainer">
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+      <h1>Dr. Bounce</h1>
+      <button id="startBtn">Play</button>
     </div>
 
-    <!-- Desktop Inhalt -->
-    <div class="page desktop-only">
-        <header class="hero fade-in">
-            <div class="hero-inner slide-up">
-                <p class="hero-kicker">Ein Ort für Geschichten</p>
-                <h1 class="hero-title">Willkommen in meiner Bibliothek der Erinnerungen</h1>
-                <p class="hero-subtitle">
-                    Geschichten, die zwischen Vergangenheit und Gegenwart wandern – klar, ruhig und zeitlos.
-                </p>
-            </div>
-        </header>
-    </div>
+    <!-- Game Screen -->
+    <canvas id="gameCanvas"></canvas>
 
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen">
+      <h1>Game Over</h1>
+      <p id="scoreText">Score: 0</p>
+      <p id="highScoreText">Highscore: 0</p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
 </body>
 </html>
